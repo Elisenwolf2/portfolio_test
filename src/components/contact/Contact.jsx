@@ -3,23 +3,23 @@ import './contact.css'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsWhatsapp} from 'react-icons/bs'
 import {RiMessengerFill} from 'react-icons/ri'
-import emailjs from 'emailjs-com'
+// import emailjs from 'emailjs-com'
 
 const Contact = () => {
-  const form = useRef();
+  // const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs.sendForm('service_imw4co6', 'template_ovps2gj', form.current, 'z2yKoW2vaC3BHxFdI')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+  //   emailjs.sendForm('service_imw4co6', 'template_ovps2gj', form.current, 'z2yKoW2vaC3BHxFdI')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
 
-      e.target.reset();
-  };
+  //     e.target.reset();
+  // };
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
@@ -45,7 +45,7 @@ const Contact = () => {
             <a href='https://wa.me/+918129831054' target='_blank'>Send a message</a>
           </article>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
+        <form >
           <input type="text" name='name' placeholder='Your Full Name' required/>
           <input type="email" name="email" placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
