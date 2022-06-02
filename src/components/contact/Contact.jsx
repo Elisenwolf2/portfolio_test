@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import './contact.css'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsWhatsapp} from 'react-icons/bs'
